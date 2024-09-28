@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/rantav/go-archetype/log"
-	"github.com/rantav/go-archetype/types"
+	"github.com/diegosz/go-archetype/log"
+	"github.com/diegosz/go-archetype/types"
 )
 
 func TestTransform(t *testing.T) {

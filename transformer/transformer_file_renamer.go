@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/rantav/go-archetype/template"
-	"github.com/rantav/go-archetype/types"
+	"github.com/diegosz/go-archetype/template"
+	"github.com/diegosz/go-archetype/types"
 )
 
 type fileRenamer struct {

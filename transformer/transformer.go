@@ -7,11 +7,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/rantav/go-archetype/log"
-	"github.com/rantav/go-archetype/operations"
-	"github.com/rantav/go-archetype/reader"
-	"github.com/rantav/go-archetype/types"
-	"github.com/rantav/go-archetype/writer"
+	"github.com/diegosz/go-archetype/log"
+	"github.com/diegosz/go-archetype/operations"
+	"github.com/diegosz/go-archetype/reader"
+	"github.com/diegosz/go-archetype/types"
+	"github.com/diegosz/go-archetype/writer"
 )
 
 type Transformer interface {

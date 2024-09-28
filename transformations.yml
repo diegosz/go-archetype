@@ -1,4 +1,13 @@
-ignore: [".git/", "transformations.yml", ".DS_Store", ".idea/", ".tmp/", "dist/", "go-archetype"]
+ignore:
+  [
+    ".git/",
+    "transformations.yml",
+    ".DS_Store",
+    ".idea/",
+    ".tmp/",
+    "dist/",
+    "go-archetype",
+  ]
 inputs:
   - id: ProjectName # Must be a unique ID. Can be used also as CLI arg
     text: What is the project name?
@@ -12,11 +21,11 @@ inputs:
   - id: ProjectType
     text: Select project type
     type: select
-    options: [ "simple",  "medium", "advanced" ]
+    options: ["simple", "medium", "advanced"]
 before:
   operations:
     - sh:
-      - ls {{ .destination }}
+        - ls {{ .destination }}
 transformations:
   - name: include the readme file
     type: include
@@ -35,7 +44,7 @@ transformations:
     files: ["cmd/root.go"]
   - name: project package
     type: replace
-    pattern: github.com/rantav/go-archetype
+    pattern: github.com/diegosz/go-archetype
     replacement: github.com/xxx/yyy # A simple replacement that does not require user input. Useful? Not really...
     files: ["*.go", "go.mod", "**/*.go"]
   - name: project name
@@ -48,7 +57,7 @@ transformations:
     region_marker: __ProjectType_SIMPLE__ # Instantiates Simple project
     condition: eq .ProjectType "simple"
     files: ["main.go"]
-  - name: medium 
+  - name: medium
     type: include
     region_marker: __ProjectType_MEDIUM__ # Instantiates Medium project
     condition: eq .ProjectType "medium"
@@ -61,5 +70,5 @@ transformations:
 after:
   operations:
     - sh:
-      - cd {{.destination}} && gofmt -s -w .
-      - echo Done archetyping from {{ .source }} to {{ .destination }} of project {{ .ProjectName }}
+        - cd {{.destination}} && gofmt -s -w .
+        - echo Done archetyping from {{ .source }} to {{ .destination }} of project {{ .ProjectName }}

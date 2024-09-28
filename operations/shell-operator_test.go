@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/rantav/go-archetype/log"
+	"github.com/diegosz/go-archetype/log"
 )
 
 func TestNewShellOperator(t *testing.T) {

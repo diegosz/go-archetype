@@ -3,7 +3,7 @@ package transformer
 import (
 	"testing"
 
-	"github.com/rantav/go-archetype/log"
+	"github.com/diegosz/go-archetype/log"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

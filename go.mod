@@ -1,4 +1,4 @@
-module github.com/rantav/go-archetype
+module github.com/diegosz/go-archetype
 
 go 1.17
 

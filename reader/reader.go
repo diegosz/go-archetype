@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/rantav/go-archetype/types"
+	"github.com/diegosz/go-archetype/types"
 )
 
 func ReadFile(path string, info os.FileInfo, sourceDir string, isIgnored func(string) bool) (

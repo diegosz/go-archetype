@@ -3,7 +3,7 @@ package transformer
 import (
 	"fmt"
 
-	"github.com/rantav/go-archetype/log"
+	"github.com/diegosz/go-archetype/log"
 )
 
 func newTransformer(spec transformationSpec, logger log.Logger) Transformer {

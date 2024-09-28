@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v2"
 
-	"github.com/rantav/go-archetype/log"
+	"github.com/diegosz/go-archetype/log"
 )
 
 func TestFromSpec(t *testing.T) {

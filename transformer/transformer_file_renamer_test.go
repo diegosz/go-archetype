@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/rantav/go-archetype/types"
+	"github.com/diegosz/go-archetype/types"
 )
 
 func TestFileRenamer_Transform(t *testing.T) {

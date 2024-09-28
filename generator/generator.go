@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/rantav/go-archetype/inputs"
-	"github.com/rantav/go-archetype/log"
-	"github.com/rantav/go-archetype/transformer"
+	"github.com/diegosz/go-archetype/inputs"
+	"github.com/diegosz/go-archetype/log"
+	"github.com/diegosz/go-archetype/transformer"
 )
 
 // Generate is the main entry point for code generation/transformations. If the

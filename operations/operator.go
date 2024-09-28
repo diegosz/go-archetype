@@ -1,7 +1,7 @@
 package operations
 
 import (
-	"github.com/rantav/go-archetype/log"
+	"github.com/diegosz/go-archetype/log"
 )
 
 type Operator interface {

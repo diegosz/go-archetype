@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/rantav/go-archetype/generator"
-	"github.com/rantav/go-archetype/log"
+	"github.com/diegosz/go-archetype/generator"
+	"github.com/diegosz/go-archetype/log"
 )
 
 // CLI flags

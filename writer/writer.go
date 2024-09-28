@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/rantav/go-archetype/log"
-	"github.com/rantav/go-archetype/types"
+	"github.com/diegosz/go-archetype/log"
+	"github.com/diegosz/go-archetype/types"
 )
 
 func WriteFile(destinationBase string, file types.File, mode os.FileMode, logger log.Logger) error {

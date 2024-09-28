@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/rantav/go-archetype/cmd"
+	"github.com/diegosz/go-archetype/cmd"
 )
 
 // BEGIN __INCLUDE_README__

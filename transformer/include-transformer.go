@@ -6,9 +6,9 @@ import (
 	"io"
 	"strings"
 
-	"github.com/rantav/go-archetype/log"
-	"github.com/rantav/go-archetype/template"
-	"github.com/rantav/go-archetype/types"
+	"github.com/diegosz/go-archetype/log"
+	"github.com/diegosz/go-archetype/template"
+	"github.com/diegosz/go-archetype/types"
 )
 
 type includeTransformer struct {

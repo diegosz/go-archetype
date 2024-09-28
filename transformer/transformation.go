@@ -3,10 +3,10 @@ package transformer
 import (
 	"strings"
 
-	"github.com/rantav/go-archetype/inputs"
-	"github.com/rantav/go-archetype/log"
-	"github.com/rantav/go-archetype/operations"
-	"github.com/rantav/go-archetype/types"
+	"github.com/diegosz/go-archetype/inputs"
+	"github.com/diegosz/go-archetype/log"
+	"github.com/diegosz/go-archetype/operations"
+	"github.com/diegosz/go-archetype/types"
 )
 
 type Transformations struct {

@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/rantav/go-archetype/log"
+	"github.com/diegosz/go-archetype/log"
 )
 
 func TestNewOperator(t *testing.T) {

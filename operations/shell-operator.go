@@ -7,8 +7,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/rantav/go-archetype/log"
-	"github.com/rantav/go-archetype/template"
+	"github.com/diegosz/go-archetype/log"
+	"github.com/diegosz/go-archetype/template"
 )
 
 type shellOperation struct {
