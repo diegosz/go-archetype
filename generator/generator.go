@@ -10,8 +10,21 @@ import (
 	"github.com/rantav/go-archetype/transformer"
 )
 
-// Generate is the main entry point for code generation/transformations.
+// Generate is the main entry point for code generation/transformations. If the
+// destination folder is not empty, it will not proceed.
 func Generate(transformationsFile, source, destination string, inputArgs []string, logger log.Logger) error {
+	return generate(transformationsFile, source, destination, inputArgs, logger, false)
+}
+
+// OverlayGenerate is the main entry point for code generation/transformations.
+// If the destination folder is not empty, it will overlay the files.
+func OverlayGenerate(transformationsFile, source, destination string, inputArgs []string, logger log.Logger) error {
+	return generate(transformationsFile, source, destination, inputArgs, logger, true)
+}
+
+func generate(transformationsFile, source, destination string,
+	inputArgs []string, logger log.Logger, overlay bool,
+) error {
 	transformations, err := transformer.Read(transformationsFile, logger)
 	if err != nil {
 		return err
@@ -33,7 +46,12 @@ func Generate(transformationsFile, source, destination string, inputArgs []strin
 		return err
 	}
 
-	err = transformer.Transform(source, destination, *transformations, logger)
+	switch overlay {
+	case true:
+		err = transformer.OverlayTransform(source, destination, *transformations, logger)
+	default:
+		err = transformer.Transform(source, destination, *transformations, logger)
+	}
 	if err != nil {
 		return err
 	}

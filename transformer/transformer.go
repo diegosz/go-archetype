@@ -21,12 +21,24 @@ type Transformer interface {
 	Transform(types.File) types.File
 }
 
+// Transform performs the actual transformation of files from source to
+// destination. If the destination is not empty, it will abort.
 func Transform(source, destination string, transformations Transformations, logger log.Logger) error {
+	return transform(source, destination, transformations, logger, false)
+}
+
+// OverlayTransform performs the actual transformation of files from source to
+// destination. If the destination is not empty, it will overlay the files.
+func OverlayTransform(source, destination string, transformations Transformations, logger log.Logger) error {
+	return transform(source, destination, transformations, logger, true)
+}
+
+func transform(source, destination string, transformations Transformations, logger log.Logger, overlay bool) error {
 	empty, err := isDirEmptyOrDoesntExist(destination)
 	if err != nil {
 		return err
 	}
-	if !empty {
+	if !overlay && !empty {
 		logger.Errorf("Destination %s is not empty, aborting", destination)
 		return errors.New("destination is not empty")
 	}
