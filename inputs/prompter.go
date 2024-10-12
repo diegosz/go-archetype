@@ -23,6 +23,8 @@ func NewPrompt(spec InputSpec) Prompter {
 		return newSimpleTextPrompter(spec)
 	case "yesno":
 		return newYesNoPrompter(spec)
+	case "noyes":
+		return newNoYesPrompter(spec)
 	case "select":
 		return newSelectPrompter(spec)
 	default:
