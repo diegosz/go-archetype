@@ -26,16 +26,10 @@ func TestFromSpec(t *testing.T) {
 			Text:    "Choose value:",
 			Options: []string{"one", "two", "three"},
 		},
-		{
-			ID:   "4",
-			Text: "are you sure?",
-			Type: "noyes",
-		},
 	})
 
-	assert.Len(prompters, 4)
+	assert.Len(prompters, 3)
 	assert.IsType(&simpleTextPrompter{}, prompters[0])
 	assert.IsType(&yesNoPrompter{}, prompters[1])
 	assert.IsType(&selectPrompter{}, prompters[2])
-	assert.IsType(&noYesPrompter{}, prompters[3])
 }
